@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="range_prices">
+        <item>20</item>
+        <item>50</item>
+        <item>100</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+    <string-array name="range_distance">
+        <item>100</item>
+        <item>300</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+    </string-array>
+    <string-array name="range_distance_drinks">
+        <item>10</item>
+        <item>50</item>
+        <item>100</item>
+        <item>500</item>
+    </string-array>
+    <string-array name="range_prices_drinks">
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>40</item>
+        <item>50</item>
+        <item>100</item>
+    </string-array>
+</resources>

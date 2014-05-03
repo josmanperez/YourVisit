@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="advance.modelling.yourvistit"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="advance.modelling.yourvisit.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.Restaurant"
+            android:label="@string/restaurant_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.ShowRestaurant"
+            android:label="@string/restaurant_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.Drinks"
+            android:label="@string/drinks_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.ShowDrinks"
+            android:label="@string/drinks_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.Hotels"
+            android:label="@string/hotel_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.ShowHotel"
+            android:label="@string/hotel_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.LocationResolver"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="advance.modelling.yourvisit.PlaceRecorder"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>

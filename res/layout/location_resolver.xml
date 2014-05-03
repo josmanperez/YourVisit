@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/imageViewFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/textViewCountryName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageViewFlag"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/textViewResolverAdminName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewCountryName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textViewResolverPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewResolverAdminName1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp" />
+
+            <ProgressBar
+                android:id="@+id/progressBarLocationResolver"
+                style="@android:style/Widget.ProgressBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <!--
+            <fragment
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                class="com.google.android.gms.maps.MapFragment" />
+            -->
+            <!--
+            <com.google.android.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textViewResolverPlace"
+                android:apiKey="AIzaSyBPHJNJwD4lUW1fZVZqryOFmU01sbxU6c8"
+                android:clickable="true"
+                android:enabled="true" />
+            -->
+        </RelativeLayout>
+    </ScrollView>
+    <!--
+    <Button
+        android:id="@+id/imageButtonMap"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:onClick="showMap"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="true"
+        android:background="@layout/blue_button"
+        android:drawableStart="@drawable/ic_action_map"
+        android:scaleType="fitXY"
+        android:text="View in Map"
+        android:visibility="gone" />
+    -->
+
+</RelativeLayout>
