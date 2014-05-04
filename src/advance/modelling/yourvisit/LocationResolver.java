@@ -19,7 +19,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
-import advance.modelling.yourvistit.R;
+import advance.modelling.yourvisit.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -31,6 +31,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -45,6 +46,9 @@ public class LocationResolver extends Activity {
 	// Change to false if you don't have network access
 	private static boolean HAS_NETWORK = true;
 
+	double latitude;
+	double longitude;
+
 	ProgressBar mProgressBar;
 
 	@Override
@@ -58,8 +62,8 @@ public class LocationResolver extends Activity {
 
 		mProgressBar = (ProgressBar) findViewById(R.id.progressBarLocationResolver);
 
-		double latitude = pastIntent.getDoubleExtra("Latitude", 0);
-		double longitude = pastIntent.getDoubleExtra("Longitude", 0);
+		latitude = pastIntent.getDoubleExtra("Latitude", 0);
+		longitude = pastIntent.getDoubleExtra("Longitude", 0);
 
 		// Check if we really had a GPS unit working on the device
 		if ((latitude == 0.0) && (longitude == 0.0)) {
@@ -84,6 +88,22 @@ public class LocationResolver extends Activity {
 		// String countryName = placeRecord.getCountryName();
 		// Log.i("Resolver", countryName);
 		// Toast.makeText(this, countryName, Toast.LENGTH_LONG).show();
+
+	}
+
+	public void showMap(View v) {
+		if (place == null) {
+			Toast.makeText(getApplicationContext(),
+					"Please find a location first", Toast.LENGTH_LONG).show();
+
+		} else {
+			Intent i = new Intent(this, ViewMap.class);
+			i.putExtra("lat", latitude);
+			i.putExtra("lon", longitude);
+			i.putExtra("place",place.getPlace());
+			startActivity(i);
+
+		}
 
 	}
 
@@ -289,8 +309,8 @@ public class LocationResolver extends Activity {
 				textVAdminName1.setText(place.getAdminName1());
 				TextView textVPlace = (TextView) findViewById(R.id.textViewResolverPlace);
 				textVPlace.setText(place.getPlace());
-				//Button imageMap = (Button) findViewById(R.id.imageButtonMap);
-				//imageMap.setVisibility(View.VISIBLE);
+				Button imageMap = (Button) findViewById(R.id.imageButtonMap);
+				imageMap.setVisibility(View.VISIBLE);
 			}
 
 			if (!HAS_NETWORK) {

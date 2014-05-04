@@ -75,7 +75,7 @@
             -->
         </RelativeLayout>
     </ScrollView>
-    <!--
+    
     <Button
         android:id="@+id/imageButtonMap"
         style="@style/ButtonText"
@@ -91,6 +91,6 @@
         android:scaleType="fitXY"
         android:text="View in Map"
         android:visibility="gone" />
-    -->
+    
 
 </RelativeLayout>

@@ -1,6 +1,6 @@
 package advance.modelling.yourvisit;
 
-import advance.modelling.yourvistit.R;
+import advance.modelling.yourvisit.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

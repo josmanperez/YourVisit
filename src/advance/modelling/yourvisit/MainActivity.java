@@ -2,7 +2,7 @@ package advance.modelling.yourvisit;
 
 import java.util.List;
 
-import advance.modelling.yourvistit.R;
+import advance.modelling.yourvisit.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
@@ -102,8 +102,8 @@ public class MainActivity extends Activity {
 					longitude = gps.getLongitude();
 
 					// Show the city on the text field
-					textLatitude = (TextView) findViewById(advance.modelling.yourvistit.R.id.latitudeText);
-					textLongitude = (TextView) findViewById(advance.modelling.yourvistit.R.id.longitudText);
+					textLatitude = (TextView) findViewById(R.id.latitudeText);
+					textLongitude = (TextView) findViewById(R.id.longitudText);
 
 					new LoadProgressBar().execute(latitude, longitude);
 
@@ -141,7 +141,7 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(advance.modelling.yourvistit.R.menu.main,
+		getMenuInflater().inflate(R.menu.main,
 				menu);
 		return true;
 	}
