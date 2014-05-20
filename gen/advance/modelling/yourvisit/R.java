@@ -17,10 +17,7 @@ public final class R {
         public static final int translate=0x7f040005;
     }
     public static final class array {
-        public static final int range_distance=0x7f0a0001;
-        public static final int range_distance_drinks=0x7f0a0002;
-        public static final int range_prices=0x7f0a0000;
-        public static final int range_prices_drinks=0x7f0a0003;
+        public static final int range_types=0x7f0a0000;
     }
     public static final class attr {
         /** 
@@ -242,68 +239,52 @@ containing a value of this type.
     }
     public static final class id {
         public static final int LinearLayout=0x7f06000b;
-        public static final int action_settings=0x7f060031;
-        public static final int buttonGenerateRestaurant=0x7f06001d;
+        public static final int action_settings=0x7f060023;
+        public static final int buttonGenerateRestaurant=0x7f06001a;
         public static final int hybrid=0x7f060004;
-        public static final int imageButtonMap=0x7f06002d;
-        public static final int imageViewFlag=0x7f060028;
+        public static final int imageButtonMap=0x7f060020;
+        public static final int imageViewFlag=0x7f06001b;
         public static final int latitudeText=0x7f06000c;
         public static final int linearLayout1=0x7f060012;
-        public static final int linearLayout2=0x7f060018;
-        public static final int linearLayout3=0x7f06001b;
-        public static final int linearLayout4=0x7f060024;
+        public static final int linearLayout2=0x7f060015;
+        public static final int linearLayout3=0x7f060018;
         public static final int locationImageButton=0x7f060006;
         public static final int longitudText=0x7f06000e;
-        public static final int map=0x7f060030;
+        public static final int map=0x7f060022;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int progressBar1=0x7f06000d;
-        public static final int progressBarLocationResolver=0x7f06002c;
-        public static final int radioButton1=0x7f060014;
-        public static final int radioButton2=0x7f060015;
-        public static final int radioButton3=0x7f060016;
-        public static final int radioButtonB1=0x7f060026;
-        public static final int radioButtonB2=0x7f060027;
-        public static final int radioButtonHotel=0x7f06001f;
-        public static final int radioButtonMotel=0x7f060020;
-        public static final int radioGroupBreakfast=0x7f060025;
-        public static final int radioGroupHotel=0x7f06001e;
-        public static final int radioGroupRestaurant=0x7f060013;
-        public static final int ratingBar1=0x7f060023;
+        public static final int progressBarLocationResolver=0x7f06001f;
         public static final int satellite=0x7f060002;
         public static final int searchImageButton=0x7f060005;
-        public static final int spinner1=0x7f060019;
-        public static final int spinnerDistance=0x7f06001c;
+        public static final int spinner_type1=0x7f060013;
+        public static final int spinner_type2=0x7f060016;
+        public static final int spinner_type3=0x7f060019;
         public static final int tableLayout=0x7f060007;
         public static final int tableRow1=0x7f060008;
         public static final int tableRow2=0x7f060009;
         public static final int tableRow3=0x7f06000a;
         public static final int terrain=0x7f060003;
         public static final int textAddress=0x7f060010;
-        public static final int textRangeOfPrices=0x7f060017;
-        public static final int textViewBreakfast=0x7f060022;
-        public static final int textViewCountryName=0x7f060029;
-        public static final int textViewDistance=0x7f06001a;
-        public static final int textViewRating=0x7f060021;
-        public static final int textViewResolverAdminName1=0x7f06002a;
-        public static final int textViewResolverPlace=0x7f06002b;
-        public static final int textViewShowRestaurant=0x7f06002f;
+        public static final int textRangeOfPrices=0x7f060014;
+        public static final int textViewCountryName=0x7f06001c;
+        public static final int textViewDistance=0x7f060017;
+        public static final int textViewResolverAdminName1=0x7f06001d;
+        public static final int textViewResolverPlace=0x7f06001e;
+        public static final int textViewShowQuery=0x7f060021;
         public static final int titleMain=0x7f06000f;
         public static final int typeDrinks=0x7f060011;
-        public static final int typeRestaurant=0x7f06002e;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int blue_button=0x7f030001;
-        public static final int drinks_layout=0x7f030002;
-        public static final int hotel_layout=0x7f030003;
-        public static final int location_resolver=0x7f030004;
-        public static final int restaurant_layout=0x7f030005;
-        public static final int show=0x7f030006;
-        public static final int view_map=0x7f030007;
+        public static final int ask_layout=0x7f030001;
+        public static final int blue_button=0x7f030002;
+        public static final int location_resolver=0x7f030003;
+        public static final int show=0x7f030004;
+        public static final int view_map=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
@@ -311,6 +292,7 @@ containing a value of this type.
     public static final class string {
         public static final int action_settings=0x7f07001c;
         public static final int app_name=0x7f07001b;
+        public static final int ask_name=0x7f07001e;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
@@ -405,7 +387,6 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f070013;
-        public static final int drinks_name=0x7f07001e;
         public static final int hotel_name=0x7f07001f;
         /**  Location client code resources (prefix with location_client) 
          */

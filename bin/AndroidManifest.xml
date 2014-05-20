@@ -39,28 +39,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="advance.modelling.yourvisit.Restaurant"
-            android:label="@string/restaurant_name" >
+            android:name="advance.modelling.yourvisit.AskMe"
+            android:label="@string/ask_name" >
         </activity>
         <activity
-            android:name="advance.modelling.yourvisit.ShowRestaurant"
-            android:label="@string/restaurant_name" >
-        </activity>
-        <activity
-            android:name="advance.modelling.yourvisit.Drinks"
-            android:label="@string/drinks_name" >
-        </activity>
-        <activity
-            android:name="advance.modelling.yourvisit.ShowDrinks"
-            android:label="@string/drinks_name" >
-        </activity>
-        <activity
-            android:name="advance.modelling.yourvisit.Hotels"
-            android:label="@string/hotel_name" >
-        </activity>
-        <activity
-            android:name="advance.modelling.yourvisit.ShowHotel"
-            android:label="@string/hotel_name" >
+            android:name="advance.modelling.yourvisit.ShowAsk"
+            android:label="@string/ask_name" >
         </activity>
         <activity
             android:name="advance.modelling.yourvisit.LocationResolver"

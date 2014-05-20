@@ -11,6 +11,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -141,52 +142,24 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main,
-				menu);
+		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
-	// This method is selected when the user clicks on Restaurant
-	public void restaurantChoice(View v) {
+	// This method is selected when a user clicks on ask me everything.. button
+	public void everythingChoice(View v) {
 
-		v.startAnimation(animAlpha);
+		Boolean Flag = PreferenceManager.getDefaultSharedPreferences(
+				getApplicationContext()).getBoolean("Flag", false);
+
 		if (longitude == 0.0 && latitude == 0.0) {
 			showToastText("Please find your location first").show();
+			if (!Flag) {
+				showToastText("Please press the \"search button\" again")
+						.show();
+			}
 		} else {
-			Intent i = new Intent(this, Restaurant.class);
-			Log.i(TAG, "lat: " + latitude);
-			i.putExtra("Lat", latitude);
-			i.putExtra("Long", longitude);
-			startActivity(i);
-			this.overridePendingTransition(0, R.anim.exit_layout);
-
-		}
-	}
-
-	// This method is selected when a user clicks on drinks button
-	public void drinksChoice(View v) {
-
-		v.startAnimation(animAlpha);
-		if (longitude == 0.0 && latitude == 0.0) {
-			showToastText("Please find your location first").show();
-		} else {
-			Intent i = new Intent(this, Drinks.class);
-			i.putExtra("Lat", latitude);
-			i.putExtra("Long", longitude);
-			startActivity(i);
-			this.overridePendingTransition(0, R.anim.exit_layout);
-		}
-
-	}
-
-	// This method is shown when a user clicks on hotels button
-	public void hotelChoice(View v) {
-
-		v.startAnimation(animAlpha);
-		if (longitude == 0.0 && latitude == 0.0) {
-			showToastText("Please find your location first").show();
-		} else {
-			Intent i = new Intent(this, Hotels.class);
+			Intent i = new Intent(this, AskMe.class);
 			i.putExtra("Lat", latitude);
 			i.putExtra("Long", longitude);
 			startActivity(i);
@@ -219,7 +192,7 @@ public class MainActivity extends Activity {
 						MAX_NUMBER_OF_RESULT_ADDRESS);
 				Log.i(TAG, "aqui " + address.toString());
 			} catch (Exception e) { // // TODO Auto-generated catch block
-				Log.i(TAG, e.toString() + " cachis " );
+				Log.i(TAG, e.toString() + " cachis ");
 				internetAccess = false;
 
 			}

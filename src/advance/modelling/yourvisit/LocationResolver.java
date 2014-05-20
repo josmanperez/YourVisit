@@ -27,6 +27,7 @@ import android.graphics.BitmapFactory;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -55,6 +56,12 @@ public class LocationResolver extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		PreferenceManager
+		.getDefaultSharedPreferences(getApplicationContext())
+		.edit()
+		.putBoolean("Flag", true)
+		.commit();
 
 		setContentView(R.layout.location_resolver);
 
@@ -100,7 +107,7 @@ public class LocationResolver extends Activity {
 			Intent i = new Intent(this, ViewMap.class);
 			i.putExtra("lat", latitude);
 			i.putExtra("lon", longitude);
-			i.putExtra("place",place.getPlace());
+			i.putExtra("place", place.getPlace());
 			startActivity(i);
 
 		}
@@ -311,6 +318,14 @@ public class LocationResolver extends Activity {
 				textVPlace.setText(place.getPlace());
 				Button imageMap = (Button) findViewById(R.id.imageButtonMap);
 				imageMap.setVisibility(View.VISIBLE);
+
+				// shared preferences
+				PreferenceManager
+						.getDefaultSharedPreferences(getApplicationContext())
+						.edit()
+						.putString("CountryName", place.getCountryName())
+						.commit();
+
 			}
 
 			if (!HAS_NETWORK) {

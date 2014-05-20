@@ -46,16 +46,6 @@
             android:id="@+id/tableRow1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
-            <Button
-                style="@style/ButtonText"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@layout/blue_button"
-                android:drawableStart="@drawable/ic_action_accept"
-                android:onClick="restaurantChoice"
-                android:text="Restaurant" />
         </TableRow>
 
         <TableRow
@@ -71,8 +61,8 @@
                 android:layout_weight="1"
                 android:background="@layout/blue_button"
                 android:drawableStart="@drawable/ic_action_accept"
-                android:onClick="drinksChoice"
-                android:text="Drinks" />
+                android:onClick="everythingChoice"
+                android:text="Ask me everything..." />
         </TableRow>
 
         <TableRow
@@ -80,16 +70,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal" >
-
-            <Button
-                style="@style/ButtonText"
-                android:layout_width="0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@layout/blue_button"
-                android:drawableStart="@drawable/ic_action_accept"
-                android:onClick="hotelChoice"
-                android:text="Hotels" />
         </TableRow>
     </TableLayout>
 
